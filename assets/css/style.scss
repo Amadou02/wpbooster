@@ -1,10 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Sanchez&display=swap");
+
+$title-font: "Sanchez", serif;
+$text-font: Arial, Helvetica, sans-serif;
+$primary: #bfdbff;
+$secondary: #000a64;
+$bronze: #d49a4e;
+$silver: #bbc6ce;
+$gold: #dcd388;
+$salmon: #ff7480;
+
 /* reset */
+
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html,
@@ -17,6 +27,8 @@ body {
   max-width: 980px;
   margin: 0 auto;
 }
+
+// navbar
 
 .nav__collapse {
   position: absolute;
@@ -31,34 +43,23 @@ body {
 
 .nav {
   margin: 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .nav .nav__toggle label {
   width: 2em;
   height: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .nav .nav__toggle .bar {
   display: block;
   height: 5px;
   width: 100%;
-  background-color: #000a64;
+  background-color: $secondary;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -66,7 +67,10 @@ body {
   -o-border-radius: 10px;
 }
 
-.nav__toggle input[type="checkbox"]:checked ~ .nav__collapse {
-  height: 100%;
+.nav .nav__toggle input[type="checkbox"] {
+//   display: none;
 }
-/*# sourceMappingURL=style.css.map */
+
+.nav__toggle input[type="checkbox"]:checked ~ .nav__collapse {
+    height: 100%;
+}
