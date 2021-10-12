@@ -25,8 +25,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: rgba(255, 255, 255, 0.3);
-  max-height: 0;
-  overflow: hidden;
+  display: none;
 }
 
 .nav {
@@ -52,9 +51,10 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  position: relative;
 }
 
-.nav .nav__toggle .bar {
+.nav__toggle .bar {
   display: block;
   height: 5px;
   width: 100%;
@@ -64,9 +64,41 @@ body {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.73, 0.22, 0.52, 0.89);
+  transition: -webkit-transform 0.5s cubic-bezier(0.73, 0.22, 0.52, 0.89);
+  transition: transform 0.5s cubic-bezier(0.73, 0.22, 0.52, 0.89);
+  transition: transform 0.5s cubic-bezier(0.73, 0.22, 0.52, 0.89), -webkit-transform 0.5s cubic-bezier(0.73, 0.22, 0.52, 0.89);
+  -webkit-transition: transform 0.5s cubic-bezier(0.73, 0.22, 0.52, 0.89);
+  -moz-transition: transform 0.5s cubic-bezier(0.73, 0.22, 0.52, 0.89);
+  -ms-transition: transform 0.5s cubic-bezier(0.73, 0.22, 0.52, 0.89);
+  -o-transition: transform 0.5s cubic-bezier(0.73, 0.22, 0.52, 0.89);
 }
 
 .nav__toggle input[type="checkbox"]:checked ~ .nav__collapse {
-  height: 100%;
+  display: block;
+}
+
+.nav__toggle input[type="checkbox"]:checked ~ label span {
+  position: absolute;
+}
+
+.nav__toggle input[type="checkbox"]:checked ~ label .bar:nth-child(1) {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
+.nav__toggle input[type="checkbox"]:checked ~ label .bar:nth-child(3) {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+}
+
+.nav__toggle input[type="checkbox"]:checked ~ label .bar:nth-child(2) {
+  opacity: 0;
 }
 /*# sourceMappingURL=style.css.map */
