@@ -211,8 +211,8 @@ input[type="checkbox"]:checked + .nav__toggle .bar:nth-child(2) {
   position: relative;
   z-index: 10;
   top: 3rem;
-  -webkit-animation: take-off 3s cubic-bezier(1, 0.24, 0.36, 0.79) infinite;
-          animation: take-off 3s cubic-bezier(1, 0.24, 0.36, 0.79) infinite;
+  -webkit-animation: take-off 5s cubic-bezier(1, 0.24, 0.36, 0.79) infinite;
+          animation: take-off 5s cubic-bezier(1, 0.24, 0.36, 0.79) infinite;
 }
 
 .intro .clouds-container {
@@ -325,7 +325,7 @@ input[type="checkbox"]:checked + .nav__toggle .bar:nth-child(2) {
 }
 
 .pricing__heading {
-  margin: 2em 0;
+  margin: 2rem 0 1.5rem 0;
 }
 
 .pricing .card-container {
@@ -340,7 +340,8 @@ input[type="checkbox"]:checked + .nav__toggle .bar:nth-child(2) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 400px;
+  height: 480px;
+  padding: 0 0 5rem 0;
 }
 
 .pricing .card-container .card {
@@ -400,6 +401,7 @@ input[type="checkbox"]:checked + .nav__toggle .bar:nth-child(2) {
       -ms-flex-align: center;
           align-items: center;
   padding: 0 1.5em 3em;
+  background-color: #f0f0f0;
 }
 
 .pricing .card-container .card__price {
@@ -413,16 +415,16 @@ input[type="checkbox"]:checked + .nav__toggle .bar:nth-child(2) {
   line-height: 24px;
 }
 
-.pricing .card-container .card:nth-child(1), .pricing .card-container .card:nth-child(3) {
-  background-color: #f0f0f0;
+.pricing .card-container .card:hover {
+  height: 105%;
 }
 
-.pricing .card-container .card:nth-child(2) {
+.pricing .card-container .card:hover .card__body {
   background-color: white;
 }
 
-.pricing .card-container .card:hover {
-  height: 105%;
+.pricing .card-container .card:hover .card__price {
+  color: #ff7480;
 }
 
 .pricing .clouds {
@@ -605,9 +607,13 @@ input[type="checkbox"]:checked + .nav__toggle .bar:nth-child(2) {
     -webkit-transform: scale(1) translateY(0);
             transform: scale(1) translateY(0);
   }
+  50% {
+    -webkit-transform: scale(1.1) translateY(-30px);
+            transform: scale(1.1) translateY(-30px);
+  }
   100% {
-    -webkit-transform: scale(1.1) translateY(-50px);
-            transform: scale(1.1) translateY(-50px);
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
   }
 }
 
@@ -616,9 +622,13 @@ input[type="checkbox"]:checked + .nav__toggle .bar:nth-child(2) {
     -webkit-transform: scale(1) translateY(0);
             transform: scale(1) translateY(0);
   }
+  50% {
+    -webkit-transform: scale(1.1) translateY(-30px);
+            transform: scale(1.1) translateY(-30px);
+  }
   100% {
-    -webkit-transform: scale(1.1) translateY(-50px);
-            transform: scale(1.1) translateY(-50px);
+    -webkit-transform: scale(1) translateY(0);
+            transform: scale(1) translateY(0);
   }
 }
 
